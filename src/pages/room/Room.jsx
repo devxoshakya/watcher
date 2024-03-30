@@ -2,6 +2,7 @@ import React from "react";
 import {useParams} from "react-router-dom";
 import {ZegoUIKitPrebuilt} from "@zegocloud/zego-uikit-prebuilt";
 // Import the SCSS file
+import "./Room.css";
 
 
 
@@ -21,10 +22,15 @@ function randomID(len) {
 
 const RoomPage = () => {
     const {roomId} = useParams();
+    const redirectToExternalWebsite = (e) => {
+        // Replace the URL below with the external website URL you want to redirect to
+        const externalURL = 'https://devxoshakya.github.io/anveshna';
+        window.open(externalURL, '_blank');
+      };
     const myMeeting = async (element) => {
         const appID = 1624864632;
         const serverSecret = "dd8fad876b16abe1e51d86b94e6ff3f4";
-        const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(appID, serverSecret,roomId, randomID(5),randomID(5));
+        const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(appID, serverSecret,'8363984', randomID(5),randomID(5));
         const zp = ZegoUIKitPrebuilt.create(kitToken);
         zp.joinRoom({
             container: element,
@@ -39,8 +45,8 @@ const RoomPage = () => {
     };
 
     return (
-        <div className="room">
-            <img src="../../../images/watcher-logo-main.png" alt="room" />
+        <div className="room" >
+            <img src="../../../images/watcher-logo-main.png" alt="room" onClick={redirectToExternalWebsite}/>
             <div className="zego" ref={myMeeting}/>
         </div>
     );

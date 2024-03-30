@@ -55,7 +55,7 @@ const HeroBanner = () => {
                             onChange={(e) => setQuery(e.target.value)}
                             onKeyUp={searchQueryHandler}
                         /> */}
-                        <button on onClick={() => {navigate('/room/:{roomID}')}}>Create Room</button>
+                        <button on onClick={() => {navigate('/room/'+roomID)}}>Create Room</button>
                     </div>
                 </div>
             </ContentWrapper>
