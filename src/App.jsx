@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { fetchDataFromApi } from "./utils/api";
+import { Helmet } from 'react-helmet';
 
 import { useSelector, useDispatch } from "react-redux";
 import { getApiConfiguration, getGenres } from "./store/homeSlice";
@@ -57,6 +58,9 @@ function App() {
 
     return (
         <BrowserRouter>
+            <Helmet>
+             <link rel="icon" href="../images/movie-logo.png" />
+             </Helmet>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/:mediaType/:id" element={<Details />} />
@@ -70,3 +74,4 @@ function App() {
 }
 
 export default App;
+
