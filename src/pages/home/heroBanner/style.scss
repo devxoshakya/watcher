@@ -10,10 +10,24 @@
     @include md {
         height: 700px;
     }
+    .img{
+        width: 30%;
+        height: 10%;
+        position: absolute;
+        top: 60px;
+        left: 50px;
+        img {
+            width: 80%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
     .backdrop-img {
         width: 100%;
         height: 100%;
         position: absolute;
+        background-image: url("../../../images/background.png");
         top: 0;
         left: 0;
         opacity: 0.5;
@@ -91,7 +105,7 @@
             button {
                 width: 100px;
                 height: 50px;
-                background: var(--gradient);
+                background: rgba(173, 32, 255, 0.5);
                 color: white;
                 outline: 0;
                 border: 0;

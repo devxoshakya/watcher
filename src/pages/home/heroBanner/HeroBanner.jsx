@@ -33,9 +33,12 @@ const HeroBanner = () => {
         <div className="heroBanner">
             {!loading && (
                 <div className="backdrop-img">
-                    <Img src={background} />
                 </div>
             )}
+            <div className="img">
+                <img  src="../../../images/watcher-logo-main.png" alt="room" />
+            </div>
+            
 
             <div className="opacity-layer"></div>
             <ContentWrapper>
