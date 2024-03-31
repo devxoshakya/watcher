@@ -36,7 +36,7 @@ const HeroBanner = () => {
                 </div>
             )}
             <div className="img">
-                <img  src="../../../images/watcher-logo-main.png" alt="room" />
+                <img  src="https://raw.githubusercontent.com/devxoshakya/watcher/main/images/watcher-logo-main.png" alt="room" />
             </div>
             
 

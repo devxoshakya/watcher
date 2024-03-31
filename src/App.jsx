@@ -57,7 +57,7 @@ function App() {
     return (
         <BrowserRouter>
             <Helmet>
-             <link rel="icon" href="../images/movie-logo.png" />
+             <link rel="icon" href="../images/movie-logo.png./assets/rel-icon-mian.png" />
              </Helmet>
             <Routes>
                 <Route path="/" element={<Home />} />
